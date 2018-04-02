@@ -1,7 +1,9 @@
 import React from "react";
+import ProfileNav from "../../component/Nav";
 
 const Profile = () =>
     <div>
+        <ProfileNav /> 
         <h1>Proflie</h1>
         <p>
             Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
