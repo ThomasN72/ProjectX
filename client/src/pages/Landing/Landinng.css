@@ -1,0 +1,19 @@
+.landing-background-image {
+    background-image: url(../../assets/FrontPage.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* background-size: cover; */
+    /* min-width: 100%;
+    min-height: 100%; */
+    display: block;
+}
+
+.landing-background-image-two {
+    background-image: url(../../assets/FrontPage.jpg);
+    background-repeat: no-repeat;
+    height: 100px;
+}
+
+.buttons-style {
+    padding-top: 20%;
+}
