@@ -1,7 +1,28 @@
-.admin-nav-link-btn {
-    padding: 3px!important;
+.navbar {
+    margin: 0;
+    border-radius: 0;
+    background-color: #083D77;
 }
 
-.nav-left {
-    margin-left: auto;
+a {
+    color: #F4D35E;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.nav-links {
+    float: right;
+    display: flex;
+}
+
+.nav-header {
+    float: left;
+}
+
+body {
+    background-color: #EBEBD3;
+    margin: 0;
 }
