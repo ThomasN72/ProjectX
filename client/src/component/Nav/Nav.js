@@ -1,21 +1,39 @@
 import React from "react";
-import { Nav, NavItem, NavLink, Button } from 'reactstrap';
+import { Navbar, NavbarBrand,Nav, NavItem, NavLink, Button } from 'reactstrap';
 import './nav.css';
 
 const ProfileNav = props => (
-	<div className='admin-nav-bar'>
-	  <Nav className='admin-nav'>
-	    <NavItem className='admin-nav-item'>
-	      <NavLink className='admin-nav-link' href="/admin">Games</NavLink>
-	    </NavItem>
-	    <NavItem className='admin-nav-item'>
-	      <NavLink className='admin-nav-link' href="/admin/game">Add Game</NavLink>
-	    </NavItem>
-	    <NavItem className='admin-nav-item nav-left'>
-	      <NavLink className='admin-nav-link-btn' href="#"><Button color='primary'>Logout</Button></NavLink>
-	    </NavItem>
-	  </Nav>
-	</div>
+    <nav className="navbar navbar-inverse navbar-top">
+        <div className="container-fluid">
+            <div className="navbar-header">
+                <button type="button" className="collapsed navbar-toggle">
+                    <a href="/" className="navbar-brand">
+                        Home
+                    </a>
+                </button>
+                
+            </div>
+            <div className="nav-links">
+                <div className="link">
+                    <button type="button" className="collapsed navbar-toggle">
+                        <a href="" className="navbar-brand">My Profile</a>
+                    </button>
+                    
+                </div>
+                <div className="link">
+                    <button type="button" className="collapsed navbar-toggle">
+                        <a href="" className="navbar-brand">Applied</a>
+                    </button>
+                    
+                </div>
+                <div className="link">
+                    <button type="button" className="collapsed navbar-toggle">
+                        <a href="" className="navbar-brand">Saved</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 );
 
 export default ProfileNav;
