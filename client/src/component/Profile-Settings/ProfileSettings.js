@@ -91,8 +91,6 @@ class Profile extends Component {
               </FormGroup>
             </Col>
           </Row>
-            
-            
         <FormGroup>
           <Label for="Education-Level">Education Level</Label>
           <Input type="select" name="select" id="exampleSelect">

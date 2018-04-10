@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import ProfileNav from "../../component/Nav";
-import ProfileSettings from "../../component/Profile-Settings";
-import "./profile.css";
+import "./Feed.css"
 import API from "../../utils/userAPI.js";
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 
-class Profile extends Component {
+class Feed extends Component {
     state = {
+        colleges: [],
         usersname: "",
         email: "",
         password: "",
@@ -30,7 +30,7 @@ class Profile extends Component {
         let user = this.state;
         console.log("USER");
         console.log(user);
-        API.createUser( user )
+        axios.post(`/api/users`, { user })
             .then(res => {
                 console.log(res.data);
                 this.setState(res.data);
