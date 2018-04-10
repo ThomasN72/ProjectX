@@ -15,37 +15,79 @@ class Profile extends Component {
             <Col>
                 <FormGroup>
                   <Label for="exampleEmail">Email</Label>
-                  <Input type="email" name="email" value={this.props.email} id="exampleEmail" placeholder="Your Email" />
+                  <Input 
+                    type="email"
+                    id="exampleEmail"
+                    placeholder="Your Email" 
+                    onChange={this.props.inputHandler}
+                    name='email' 
+                    value={this.props.email} 
+                  />
                 </FormGroup>
             </Col>
             <Col>
                 <FormGroup>
                   <Label for="examplePassword">Password</Label>
-                  <Input type="password" name="password" value={this.props.password} id="examplePassword" placeholder="Type Password" />
+                  <Input
+                    type="password" 
+                    name="password"  
+                    id="examplePassword" 
+                    placeholder="Type Password" 
+                    onChange={this.props.inputHandler}
+                    value={this.props.password}
+                  />
                 </FormGroup>
             </Col>
             <Col>
               <FormGroup>
-                <Label for="name">Name</Label>
-                  <Input type="text" name="name" value={this.props.name} id="name" placeholder="Name" />
+                <Label for="usersname">Name</Label>
+                  <Input 
+                    type="text" 
+                    name="usersname"  
+                    id="usersname" 
+                    placeholder="Name" 
+                    onChange={this.props.inputHandler}
+                    value={this.props.usersname}
+                  />
               </FormGroup>
             </Col>
           </Row>
             <FormGroup>
               <Label for="location">Location</Label>
-              <Input type="text" name="location" value={this.props.location} id="location" placeholder="location" />
+              <Input 
+                type="text" 
+                name="location"   
+                id="location" 
+                placeholder="location"
+                onChange={this.props.inputHandler}
+                value={this.props.locationn}  
+              />
             </FormGroup>
           <Row>
             <Col>
               <FormGroup>
                 <Label for="sat">SAT Score</Label>
-                  <Input type="number" name="sat" value={this.props.sat} id="sat" placeholder="SAT Score" />
+                  <Input 
+                    type="number" 
+                    name="sat"  
+                    id="sat" 
+                    placeholder="SAT Score" 
+                    onChange={this.props.inputHandler}
+                    value={this.props.sat}
+                  />
               </FormGroup>
             </Col>
             <Col>
               <FormGroup>
                 <Label for="act">ACT Score</Label>
-                  <Input type="number" name="act" value={this.props.act} id="act" placeholder="ACT Score" />
+                  <Input 
+                    type="number"
+                    name="act"  
+                    id="act" 
+                    placeholder="ACT Score" 
+                    onChange={this.props.inputHandler}
+                    value={this.props.act}
+                  />
               </FormGroup>
             </Col>
           </Row>

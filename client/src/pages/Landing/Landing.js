@@ -3,10 +3,10 @@ import SignUp from '../../component/SignUp/SignUp.js'
 import LogIn from '../../component/LogIn/LogIn.js'
 import Background from "../../component/Background/Background.js"
 import './Landing.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'reactstrap';
 
-import '../../assets/FrontPage.jpg'
+import '../../static/FrontPage.jpg'
 
 class Landing extends Component {
     state = {
@@ -26,7 +26,7 @@ class Landing extends Component {
                 <div>
                     <Container>
                         <Row>
-                        <img source={require("../../assets/FrontPageTwo.jpg")}/>
+                        <img source={require("../../static/FrontPageTwo.jpg")}/>
                         <p>Learn More!</p>
                         </Row>
                     </Container>

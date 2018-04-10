@@ -1,0 +1,5 @@
+.landing-background-image {
+    background-image: url(../../static/FrontPage.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

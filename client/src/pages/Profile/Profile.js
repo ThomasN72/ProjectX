@@ -4,10 +4,11 @@ import ProfileSettings from "../../component/Profile-Settings";
 import "./profile.css";
 import API from "../../utils/userAPI.js";
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
+import axios from 'axios';
 
 class Profile extends Component {
     state = {
-        name: "",
+        usersname: "",
         email: "",
         password: "",
         location: "",
@@ -17,6 +18,8 @@ class Profile extends Component {
     }
 
     handleInputChange = event => {
+        console.log("Input change");
+        console.log(event.target);
         const { name, value } = event.target;
         this.setState({
             [name]: value
@@ -25,18 +28,10 @@ class Profile extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        let user = {
-            name: this.state.name,
-            email: this.state.email,
-            password: this.state.password,
-            location: this.state.location,
-            act: this.state.act,
-            sat: this.state.sat,
-            gpa:this.state.gpa
-        }
+        let user = this.state;
         console.log("USER");
         console.log(user);
-        API.createUser(user)
+        axios.post(`/api/users`, { user })
             .then(res => {
                 console.log(res.data);
                 this.setState(res.data);
@@ -52,7 +47,7 @@ class Profile extends Component {
                     <ProfileSettings 
                         inputHandler={this.handleInputChange}
                         buttonHandler={this.handleFormSubmit}
-                        name={this.state.name}
+                        usersname={this.state.usersname}
                         email={this.state.email}
                         password={this.state.password}
                         location={this.state.location}

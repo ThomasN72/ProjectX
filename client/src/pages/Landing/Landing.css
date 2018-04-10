@@ -1,5 +1,5 @@
 .landing-background-image {
-    background-image: url(../../assets/FrontPage.jpg);
+    background-image: url(../../static/FrontPage.jpg);
     background-repeat: no-repeat;
     height: 100vh;
     /* background-size: cover; */
@@ -9,7 +9,7 @@
 }
 
 .landing-background-image-two {
-    background-image: url(../../assets/FrontPage.jpg);
+    background-image: url(../../static/FrontPage.jpg);
     background-repeat: no-repeat;
     height: 100px;
 }

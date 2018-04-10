@@ -9,5 +9,9 @@ module.exports = {
                 console.log(err)
                 res.sendStatus(400)
             });
+    },
+    findUser: (req, res) => {
+        db.user
+            .find(req.query)
     }
 };
