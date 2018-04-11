@@ -1,3 +1,25 @@
+.container-fluid {
+    width: auto;
+    padding: 0;
+    border: 3px solid yellow;
+}
+
 .form {
     margin: 10px;
+}
+
+.feed-row {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.feed {
+    padding: 10px;
+    border: 3px solid red;
+}
+
+.userSideBar {
+    padding: 10px;
+    border: 3px solid blue;
 }
