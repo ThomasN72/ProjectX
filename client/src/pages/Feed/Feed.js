@@ -42,19 +42,7 @@ class Feed extends Component {
             <div >
                 <ProfileNav />
                 <h1>Proflie</h1>
-                <div className="form">
-                    <ProfileSettings 
-                        inputHandler={this.handleInputChange}
-                        buttonHandler={this.handleFormSubmit}
-                        usersname={this.state.usersname}
-                        email={this.state.email}
-                        password={this.state.password}
-                        location={this.state.location}
-                        act={this.state.act}
-                        sat={this.state.sat}
-                        gpa={this.state.gpa}
-                    />
-                </div>
+                
             </div>
 
         )
