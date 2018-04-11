@@ -30,7 +30,7 @@ class Profile extends Component {
         let user = this.state;
         console.log("USER");
         console.log(user);
-        API.createUser(`/api/users`,  user )
+        API.createUser(  user )
             .then(res => {
                 console.log(res.data);
                 this.setState(res.data);
