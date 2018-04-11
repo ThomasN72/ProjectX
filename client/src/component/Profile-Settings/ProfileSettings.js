@@ -91,8 +91,6 @@ class Profile extends Component {
               </FormGroup>
             </Col>
           </Row>
-            
-            
         <FormGroup>
           <Label for="Education-Level">Education Level</Label>
           <Input type="select" name="select" id="exampleSelect">
@@ -126,7 +124,7 @@ class Profile extends Component {
           </FormText>
         </FormGroup>
          <Col className='col-search-btn' md='2' xs='3'>
-						<Button className="search-btn" onClick={this.props.buttonHandler}>Search</Button>
+						<Button className="search-btn" onClick={this.props.buttonHandler}>Submit</Button>
 					</Col> 
       </Form>
         )
