@@ -4,7 +4,6 @@ import ProfileSettings from "../../component/Profile-Settings";
 import "./profile.css";
 import API from "../../utils/userAPI.js";
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
-import axios from 'axios';
 
 class Profile extends Component {
     state = {
@@ -31,7 +30,7 @@ class Profile extends Component {
         let user = this.state;
         console.log("USER");
         console.log(user);
-        axios.post(`/api/users`, { user })
+        API.createUser(`/api/users`,  user )
             .then(res => {
                 console.log(res.data);
                 this.setState(res.data);

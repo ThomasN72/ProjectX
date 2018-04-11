@@ -2,16 +2,20 @@ import React, {Component} from "react";
 import SignUp from '../../component/SignUp/SignUp.js'
 import LogIn from '../../component/LogIn/LogIn.js'
 import Background from "../../component/Background/Background.js"
+import LearnMore from "../../component/LearnMore/LearnMore.js"
+import imgFile from "../../static/FrontPageTwo.jpg"
 import './Landing.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'reactstrap';
 
 import '../../static/FrontPage.jpg'
 
 class Landing extends Component {
     state = {
-
     };
+
+  
+
+
     render (){
         return (
             <div>
@@ -23,11 +27,17 @@ class Landing extends Component {
                         </Row>
                     </Col>
                 </div>
+                <br/>
                 <div>
                     <Container>
                         <Row>
-                        <img source={require("../../static/FrontPageTwo.jpg")}/>
-                        <p>Learn More!</p>
+                            <Col className="image-style">
+                                <img className="image-style" src={imgFile}/>
+                            </Col>
+
+                            <Col>
+                                <LearnMore/>
+                            </Col>
                         </Row>
                     </Container>
                 </div>

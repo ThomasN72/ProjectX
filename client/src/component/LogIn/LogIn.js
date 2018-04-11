@@ -11,13 +11,22 @@ class LogIn extends React.Component {
 
         this.toggle = this.toggle.bind(this);
     }
-
+    state = {
+        username:"",
+        password:"",
+    }
+    handleInputChange = event => {
+        const {name, value} = event.target;
+        this.setState({
+            [name]: state
+        })
+    }
     toggle() {
+        event.preventDefault();
         this.setState({
             modal: !this.state.modal
         });
     }
-
     render() {
         return (
             <div>
@@ -27,10 +36,20 @@ class LogIn extends React.Component {
                     <ModalBody>
                         <form>
                             Username:
-                            <input type="text" name="username" placeholder="username"/>
+                            <input 
+                            value={this.state.username}
+                            type="text" 
+                            onChange={this.handleInputChange}
+                            name="username" 
+                            placeholder="username"/>
                             <br/>
                             Password:
-                            <input type="text" name="password" placeholder="password"/>
+                            <input 
+                            value={this.state.password}
+                            type="text" 
+                            onChange={this.handleInputChange}
+                            name="password" 
+                            placeholder="password"/>
                         </form> 
                     </ModalBody>
                     <ModalFooter>
