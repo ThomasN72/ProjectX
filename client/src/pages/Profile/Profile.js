@@ -7,6 +7,7 @@ import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'react
 import InfoCard from "../../component/InfoCard";
 import UserInfo from "../../component/UserInfo";
 
+
 class Profile extends Component {
     state = {
         usersname: "",
@@ -32,6 +33,7 @@ class Profile extends Component {
         let user = this.state;
         console.log("USER");
         console.log(user);
+
         API.createUser( user )
             .then(res => {
                 console.log(res.data);
