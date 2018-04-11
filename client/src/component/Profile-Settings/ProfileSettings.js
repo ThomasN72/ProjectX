@@ -124,7 +124,7 @@ class Profile extends Component {
           </FormText>
         </FormGroup>
          <Col className='col-search-btn' md='2' xs='3'>
-						<Button className="search-btn" onClick={this.props.buttonHandler}>Search</Button>
+						<Button className="search-btn" onClick={this.props.buttonHandler}>Submit</Button>
 					</Col> 
       </Form>
         )

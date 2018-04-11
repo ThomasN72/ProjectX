@@ -4,7 +4,8 @@ import ProfileSettings from "../../component/Profile-Settings";
 import "./profile.css";
 import API from "../../utils/userAPI.js";
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
-import InfoCard from "../../component/InfoCard"
+import InfoCard from "../../component/InfoCard";
+import UserInfo from "../../component/UserInfo";
 
 class Profile extends Component {
     state = {
@@ -43,16 +44,14 @@ class Profile extends Component {
             <div className="container-fluid">
                 <ProfileNav />
                 <h1>Proflie</h1>
-                <Row >
+                <Row className="feed-row">
                     <Col className="feed" sm={{ size: 8, order: 0, offset: 0 }}>
                         <InfoCard />
                         <InfoCard />
                         <InfoCard />
                     </Col>
-                    <Col className="userSideBar" sm={{ size: 4, order: 1, offset: 0 }}>
-                        <h3>Profile</h3>
-                        <h3>Friends</h3>
-                        <h3>College Search</h3>
+                    <Col className="userSideBar" sm={{ size: 3, order: 1, offset: 0 }}>
+                        <UserInfo /> 
                     </Col>
                 </Row>
                 
