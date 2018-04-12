@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import SignUp from '../../component/SignUp/SignUp.js'
-import LogIn from '../../component/LogIn/LogIn.js'
+import SignUpBtn from '../../component/SignUpBtn/SignUpBtn.js'
 import Background from "../../component/Background/Background.js"
 import LearnMore from "../../component/LearnMore/LearnMore.js"
 import imgFile from "../../static/FrontPageTwo.jpg"
@@ -13,17 +12,13 @@ class Landing extends Component {
     state = {
     };
 
-  
-
-
-    render (){
+      render (){
         return (
             <div>
                 <div className="landing-background-image">
                     <Col className="buttons-style" sm={{ size: 'auto', offset: 5 }}>
                         <Row>
-                            <SignUp/>
-                            <LogIn property="LogIn"/>
+                            <SignUpBtn/>
                         </Row>
                     </Col>
                 </div>

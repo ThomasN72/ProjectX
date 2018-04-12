@@ -1,18 +1,12 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
+import { Link } from "react-router-dom";
 
-class UserInfo extends Component {
+export const UserInfo = props => (
+    <div>
+        <p>View Profile</p>
+    </div>
+)
 
-  constructor(props){
-    super(props);
-  }
-    render() {
-        return (
-            <div>
-                <h3>{this.props.usersname}</h3>
-            </div>
-        )
-    }
-}
 
-export default UserInfo;
+

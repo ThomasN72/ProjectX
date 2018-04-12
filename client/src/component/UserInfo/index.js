@@ -1,2 +1,1 @@
-export { default }
-from "./UserInfo.js";
+export * from "./UserInfo";

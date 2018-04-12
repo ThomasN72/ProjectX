@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import ProfileNav from "../../component/Nav";
 import "./Form.css";
+import { Link } from "react-router-dom";
 
 class Profile extends Component {
 
@@ -124,7 +125,7 @@ class Profile extends Component {
           </FormText>
         </FormGroup>
          <Col className='col-search-btn' md='2' xs='3'>
-						<Button className="search-btn" onClick={this.props.buttonHandler}>Submit</Button>
+              <Button className="search-btn" onClick={this.props.buttonHandler}>Submit</Button>
 					</Col> 
       </Form>
         )

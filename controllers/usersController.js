@@ -15,8 +15,15 @@ module.exports = {
                 res.sendStatus(400)
             });
     },
-    findUser: (req, res) => {
+    getUser: (req, res) => {
+        console.log("Getting user.........");
+        console.log("ID", req.params.email);
+        console.log("-------req.params---------");
+        console.log(req.params);
+        console.log("===================");
         db.user
-            .find(req.query)
+            .find({ email: req.params.email })
+            .then(user => res.json(user))
+            .catch(err => res.status(422).json(err))
     }
 };
