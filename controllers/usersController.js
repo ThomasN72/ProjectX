@@ -17,13 +17,29 @@ module.exports = {
     },
     getUser: (req, res) => {
         console.log("Getting user.........");
-        console.log("ID", req.params.email);
+        console.log("Email", req.params.email);
         console.log("-------req.params---------");
-        console.log(req.params);
+        console.log(req);
+        console.log("-------req.params.id---------");
+        console.log(req.params.id);
+        // userEmail = req.params.email;
         console.log("===================");
-        db.user
-            .find({ email: req.params.email })
-            .then(user => res.json(user))
-            .catch(err => res.status(422).json(err))
+        db.User.findOne({ _id: req.params.email })
+            .then(user => {
+                res.json(user);
+            })
+            .catch(err => {
+                console.log(err);
+                res.json(err);
+            });
+    },
+    findAll: (req, res) => {
+        db.User.find({})
+            .then(res => console.log(res))
+    },
+    findOne: (req, res) => {
+        console.log("=1=1=1=1=1=1=1=1=1=1=1=1=1=1=1=1=");
+        db.User.find({ email: "cmatson93@gmail.com" })
+        console.log("=====end======end=======end");
     }
 };

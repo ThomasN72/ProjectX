@@ -43,6 +43,11 @@ class Profile extends Component {
             })
             .catch(err => console.log(err))
     }
+
+    componentDidMount(){
+        // API.findAll();
+        API.findOne();
+    }
     render() {
         return (
             <div className="container-fluid">
@@ -74,7 +79,7 @@ class Profile extends Component {
                         <InfoCard />
                     </Col>
                     <Col className="userSideBar" sm={{ size: 3, order: 1, offset: 0 }}>
-                        <Link to={"/"+ this.state.email}>
+                        <Link to={"/Profile/"+ this.state._id}>
                         <UserInfo 
                             usersname={this.state.usersname}
                             location={this.state.location}

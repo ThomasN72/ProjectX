@@ -13,7 +13,7 @@ const App = () =>
         <Route exact path="/" component={Landing} />
         <Route exact path="/Profile" component={Profile} />
         <Route exact path="/Home" component={Feed} />
-        <Route exact path="/Profile/:email" component={UserProfile} />
+        <Route exact path="/Profile/:id" component={UserProfile} />
       </Switch>
     </div>
   </Router>;

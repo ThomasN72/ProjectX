@@ -11,9 +11,9 @@ class UserProfile extends Component {
     }
 
     loadUserData() {
-        API.getUserData(this.props.match.params.email)
+        API.getUserData(this.props.match.params.id)
             .then(res => 
-                this.setState({ user: res.data })
+                console.log( res )
             )
             .catch(err => console.log(err))
     }
