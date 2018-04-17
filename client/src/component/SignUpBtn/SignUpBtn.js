@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Button } from 'reactstrap';
 import { Link } from "react-router-dom";
 
-const SignUp = props => {
+const SignUpBtn = props => {
     return (
         <div>
-            <Button className="sigup-style"><Link to="/profile">Sign Up</Link></Button>
+            <Button className="sigup-style"><Link to="/Profile">Sign Up</Link></Button>
         </div>
     )
 }
 
-export default SignUp;
+export default SignUpBtn;

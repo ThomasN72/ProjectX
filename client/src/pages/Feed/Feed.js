@@ -16,37 +16,25 @@ class Feed extends Component {
         gpa: ""
     }
 
-    handleInputChange = event => {
-        console.log("Input change");
-        console.log(event.target);
-        const { name, value } = event.target;
-        this.setState({
-            [name]: value
-        });
+    componentDidMount(){
+        this.loadUserData();
     }
 
-    handleFormSubmit = event => {
-        event.preventDefault();
-        let user = this.state;
-        console.log("USER");
-        console.log(user);
-        axios.post(`/api/users`, { user })
-            .then(res => {
-                console.log(res.data);
-                this.setState(res.data);
-            })
+    loadUserData() {
+        API.GetUser(this.props.match.params.id)
+            .then(res => console.log(res.data))
             .catch(err => console.log(err))
     }
+
+    
     render() {
-        return (
-            <div >
-                <ProfileNav />
-                <h1>Proflie</h1>
-                
-            </div>
+        return ( 
+        <div>
+        
+        </div> 
 
         )
     }
 }
 
-export default Profile;
+export default Feed;
