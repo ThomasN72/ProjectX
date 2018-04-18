@@ -1,11 +1,11 @@
 .navbar {
     margin: 0;
     border-radius: 0;
-    background-color: #083D77;
+    background-color: #1f7a8c;
 }
 
 a {
-    color: #F4D35E;
+    color: #E1E5f2;
 }
 
 button {
@@ -23,6 +23,7 @@ button {
 }
 
 body {
-    background-color: #EBEBD3;
+    background-color: #ffffff;
     margin: 0;
+    color: #022B3A;
 }

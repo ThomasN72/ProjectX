@@ -1,5 +1,12 @@
 Form {
-    border: 2px solid black;
+    border: 5px solid #E1E5F2;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #1a6473;
+    color: #E1E5F2;
+}
+
+.form-control {
+    background-color: #ffffff;
 }

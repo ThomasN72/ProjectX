@@ -4,6 +4,7 @@ import API from "../../utils/userAPI.js";
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import InfoCard from "../../component/InfoCard";
 import { UserInfo } from "../../component/UserInfo";
+import "./UserProfile.css";
 
 class UserProfile extends Component {
     state = {
@@ -12,9 +13,8 @@ class UserProfile extends Component {
 
     loadUserData() {
         API.getUserData(this.props.match.params.id)
-            .then(res => 
-                console.log( res )
-            )
+            // .then(res => console.log(res.data))
+            .then(res => this.setState({ user: res.data }))
             .catch(err => console.log(err))
     }
 
@@ -26,7 +26,24 @@ class UserProfile extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <h1> User Profile </h1>                
+                <ProfileNav /> 
+                <div className="userInfo">
+                    <Row>
+                        <Col className="prof-col">
+                            <h1> {this.state.user.usersname} </h1> 
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="prof-col">
+                            <h4> {this.state.user.location} </h4>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="prof-col">
+                            <h4> {this.state.user.bio} </h4>
+                        </Col>
+                    </Row>
+                </div>
             </div>
 
         )
