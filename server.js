@@ -34,7 +34,7 @@ const MONGODB_URI = "mongodb://heroku_lkxldss7:a16oev3efogqsamras216lfrr0@ds1493
 // };
 
 // Set up promises with mongoose
-mongoose.Promise = global.Promise;
+// mongoose.Promise = global.Promise;
 
 
 // Connect to the Mongo DB
