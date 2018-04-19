@@ -1,27 +1,37 @@
 {
-  "name": "projectx",
-  "version": "1.0.0",
-  "description": "Develop a full-stack application to help prospective students to create a profile for school application. The application can be a gateway between schools and students to find the best match University.",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ThomasN72/ProjectX.git"
-  },
-  "author": "Thomas Ng and Christina Ng",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ThomasN72/ProjectX/issues"
-  },
-  "homepage": "https://github.com/ThomasN72/ProjectX#readme",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "body-parser": "^1.18.2",
-    "express": "^4.16.3",
-    "mongoose": "^5.0.13",
-    "react-router-dom": "^4.2.2",
-    "request": "^2.85.0"
-  }
+    "name": "projectx",
+    "version": "1.0.0",
+    "description": "Develop a full-stack application to help prospective students to create a profile for school application. The application can be a gateway between schools and students to find the best match University.",
+    "main": "server.js",
+    "scripts": {
+        "server": "node server.js",
+        "client": "node scripts/start-client.js",
+        "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+        "build": "node scripts/build.js",
+        "seed": "node scripts/seedDB.js -platforms && node scripts/seedDB.js -gameList",
+        "seed-platforms": "node scripts/seedDB.js -platforms",
+        "seed-list": "node scripts/seedDB.js -gameList",
+        "seed-details": "node scripts/seedDB.js -gameDetails",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "test-seed": "node scripts/testSeed.js",
+        "installDeps": "yarn && cd client && yarn"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ThomasN72/ProjectX.git"
+    },
+    "author": "Thomas Ng and Christina Ng",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ThomasN72/ProjectX/issues"
+    },
+    "homepage": "https://github.com/ThomasN72/ProjectX#readme",
+    "dependencies": {
+        "axios": "^0.18.0",
+        "body-parser": "^1.18.2",
+        "express": "^4.16.3",
+        "mongoose": "^5.0.13",
+        "react-router-dom": "^4.2.2",
+        "request": "^2.85.0"
+    }
 }
