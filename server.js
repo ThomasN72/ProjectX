@@ -21,17 +21,17 @@ app.use(routes);
 const MONGODB_URI = "mongodb://heroku_lkxldss7:a16oev3efogqsamras216lfrr0@ds149309.mlab.com:49309/heroku_lkxldss7";
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
-mongoose.Promise = Promise;
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/oneappDB";
+// mongoose.Promise = Promise;
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/oneappDB";
+mongoose.connect(MONGODB_URI);
 
-
-if (process.env.MONGODB_URI) {
-    mongoose.connect(MONGODB_URI, {
-        useMongoClient: true
-    })
-} else {
-    mongoose.connect("mongodb://localhost/oneappDB");
-};
+// if (process.env.MONGODB_URI) {
+//     mongoose.connect(MONGODB_URI, {
+//         useMongoClient: true
+//     })
+// } else {
+//     mongoose.connect("mongodb://localhost/oneappDB");
+// };
 
 // // Set up promises with mongoose
 // mongoose.Promise = global.Promise;
