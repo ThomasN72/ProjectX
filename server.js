@@ -18,6 +18,7 @@ app.use(express.static("client/build"));
 // API routes
 app.use(routes);
 
+const MONGODB_URI = "mongodb://heroku_lkxldss7:a16oev3efogqsamras216lfrr0@ds149309.mlab.com:49309/heroku_lkxldss7";
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
@@ -34,7 +35,7 @@ if (process.env.MONGODB_URI) {
 
 // // Set up promises with mongoose
 // mongoose.Promise = global.Promise;
-// const MONGODB_URI = "mongodb://heroku_lkxldss7:a16oev3efogqsamras216lfrr0@ds149309.mlab.com:49309/heroku_lkxldss7";
+
 
 // // Connect to the Mongo DB
 // mongoose.connect(
