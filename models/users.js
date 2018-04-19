@@ -10,6 +10,7 @@ const userSchema = new Schema({
     sat: { type: Number, required: false },
     gpa: { type: Number, require: false },
     location: { type: String },
+    bio: { type: String },
     date: { type: Date, default: Date.now }
 });
 

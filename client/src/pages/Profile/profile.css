@@ -1,7 +1,10 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .container-fluid {
     width: auto;
     padding: 0;
-    border: 3px solid yellow;
 }
 
 .form {
@@ -16,10 +19,32 @@
 
 .feed {
     padding: 10px;
-    border: 3px solid red;
 }
 
 .userSideBar {
+    padding: 0;
+    color: #022b3a;
+    background-color: #e1e5f2;
+    /* border: 3px solid #F4D35E; */
+}
+
+h2 {
     padding: 10px;
-    border: 3px solid blue;
+}
+
+h2:hover {
+    background-color: #ffffff;
+}
+
+.col {
+    margin: 0;
+    padding: 0;
+}
+
+.userInfo {
+    color: black;
+}
+
+.userInfo:hover {
+    background-color: #ffffff;
 }

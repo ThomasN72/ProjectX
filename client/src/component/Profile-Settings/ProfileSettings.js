@@ -113,16 +113,18 @@ class Profile extends Component {
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="exampleText">Text Area</Label>
-          <Input type="textarea" name="text" id="exampleText" />
+          <Label for="Bio">Short Bio</Label>
+              <Input
+                type="textarea"
+                name="bio"
+                id="bio"
+                onChange={this.props.inputHandler}
+                value={this.props.bio}
+              />
         </FormGroup>
         <FormGroup>
-          <Label for="exampleFile">File</Label>
-          <Input type="file" name="file" id="exampleFile" />
-          <FormText color="muted">
-            This is some placeholder block-level help text for the above input.
-            It's a bit lighter and easily wraps to a new line.
-          </FormText>
+          <Label for="picture">Picture</Label>
+          <Input type="file" name="picture" id="picture" />
         </FormGroup>
          <Col className='col-search-btn' md='2' xs='3'>
               <Button className="search-btn" onClick={this.props.buttonHandler}>Submit</Button>

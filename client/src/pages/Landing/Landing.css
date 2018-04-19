@@ -1,15 +1,38 @@
 .landing-background-image {
-    background-image: url(../../static/FrontPage.jpg);
+    background-image: url(../../static/auditorium-benches-chairs-207691.jpg);
     background-repeat: no-repeat;
     height: 100vh;
+    background-size: cover;
+}
+
+.color {
+    height: 100vh;
+    background: rgba(31, 122, 140, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    max-width: 350px;
+    max-height: 200px;
+    margin-top: 200px;
+    margin-bottom: 15px;
 }
 
 .image-style {
     width: 100%;
     border-radius: 15px;
-
 }
 
 .buttons-style {
     padding-top: 20%;
+}
+
+.row {
+    margin: 0;
+}
+
+.col {
+    margin: 0;
 }

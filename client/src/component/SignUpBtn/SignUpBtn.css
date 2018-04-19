@@ -1,3 +1,19 @@
 .sigup-style {
     color: white;
+    background-color: #1f7a8c;
+    border: 0.8px solid #5c9eab;
+}
+
+.sigup-style:hover {
+    background-color: #5c9eab;
+    border: 0.8px solid #5c9eab;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
 }

@@ -16,5 +16,9 @@ export default {
     },
     findOne: function() {
         return axios.get('/api/users');
+    },
+    getCollegeData: function(user) {
+        console.log(user)
+        return axios.get('/api/colleges', user);
     }
 }

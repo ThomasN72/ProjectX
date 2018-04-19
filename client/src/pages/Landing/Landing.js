@@ -3,8 +3,10 @@ import SignUpBtn from '../../component/SignUpBtn/SignUpBtn.js'
 import Background from "../../component/Background/Background.js"
 import LearnMore from "../../component/LearnMore/LearnMore.js"
 import imgFile from "../../static/FrontPageTwo.jpg"
+import logoFile from "../../static/whiteLogo.png"
 import './Landing.css';
 import { Container, Row, Col } from 'reactstrap';
+import HomeNav from "../../component/HomeNav";
 
 import '../../static/FrontPage.jpg'
 
@@ -15,12 +17,13 @@ class Landing extends Component {
       render (){
         return (
             <div>
+                <HomeNav />
                 <div className="landing-background-image">
-                    <Col className="buttons-style" sm={{ size: 'auto', offset: 5 }}>
-                        <Row>
-                            <SignUpBtn/>
-                        </Row>
-                    </Col>
+                <div className="color">
+                   
+                    <img className="logo" src={logoFile}/>
+                    <SignUpBtn/>
+                    </div>
                 </div>
                 <br/>
                 <div>
@@ -35,6 +38,7 @@ class Landing extends Component {
                             </Col>
                         </Row>
                     </Container>
+                
                 </div>
             </div>
         )

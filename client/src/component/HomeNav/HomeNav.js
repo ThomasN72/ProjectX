@@ -1,9 +1,9 @@
 import React from "react";
 import { Navbar, NavbarBrand,Nav, NavItem, NavLink, Button } from 'reactstrap';
-import './nav.css';
+import './HomeNav.css';
 
-const ProfileNav = props => (
-    <nav className="navbar navbar-inverse navbar-top">
+const HomeNav = props => (
+    <nav className="navbar navbar-top fixed-top">
         <div className="container-fluid">
             <div className="navbar-header">
                 <button type="button" className="collapsed navbar-toggle">
@@ -16,19 +16,19 @@ const ProfileNav = props => (
             <div className="nav-links">
                 <div className="link">
                     <button type="button" className="collapsed navbar-toggle">
-                        <a href="" className="navbar-brand">My Profile</a>
+                        <a href="" className="navbar-brand">Learn More</a>
                     </button>
                     
                 </div>
                 <div className="link">
                     <button type="button" className="collapsed navbar-toggle">
-                        <a href="" className="navbar-brand">Applied</a>
+                        <a href="" className="navbar-brand">Contact</a>
                     </button>
                     
                 </div>
                 <div className="link">
                     <button type="button" className="collapsed navbar-toggle">
-                        <a href="" className="navbar-brand">Saved</a>
+                        <a href="" className="navbar-brand">Sign Up</a>
                     </button>
                 </div>
             </div>
@@ -36,4 +36,4 @@ const ProfileNav = props => (
     </nav>
 );
 
-export default ProfileNav;
+export default HomeNav;

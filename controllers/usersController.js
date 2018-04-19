@@ -2,10 +2,10 @@ const db = require("../models");
 
 module.exports = {
     createUser: (req, res) => {
-        console.log("----CONTROLLER SERVER SIDE----");
+        console.log("----CONTROLLER SERVER SIDE (Create User)----");
         console.log("req.body");
         console.log(req.body);
-        console.log(req.body.user);
+        // console.log(req.body.user);
         console.log("--------------------------");
         const user = new db.User(req.body);
         user.save()
@@ -19,7 +19,7 @@ module.exports = {
         console.log("Getting user.........");
         console.log("Email", req.params.email);
         console.log("-------req.params---------");
-        console.log(req);
+        console.log(req.params);
         console.log("-------req.params.id---------");
         console.log(req.params.id);
         // userEmail = req.params.email;
