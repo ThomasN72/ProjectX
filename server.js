@@ -39,7 +39,7 @@ const MONGODB_URI = "mongodb://heroku_lkxldss7:a16oev3efogqsamras216lfrr0@ds1493
 
 // Connect to the Mongo DB
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/oneappDB"
+    process.env.MONGODB_URI
 );
 
 app.listen(PORT, function() {
