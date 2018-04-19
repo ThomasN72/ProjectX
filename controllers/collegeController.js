@@ -34,6 +34,7 @@ module.exports = {
             }
             var dataObj = { "colleges": [] };
             dataObj["colleges"] = collegeArr;
+            console.log(dataObj);
             res.json(dataObj);
         })
     }

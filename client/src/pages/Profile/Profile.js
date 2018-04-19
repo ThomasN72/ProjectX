@@ -38,7 +38,7 @@ class Profile extends Component {
         console.log("USER");
         console.log(user);
 
-        API.createUser( user )
+        API.createUser(user)
             .then(res => {
                 console.log(res.data);
                 this.setState(res.data);
@@ -47,7 +47,7 @@ class Profile extends Component {
             .catch(err => console.log(err))
     }
 
-    componentDidMount(){
+    componentDidMount() {
         API.findOne();
     }
 
@@ -66,8 +66,8 @@ class Profile extends Component {
 
     render() {
         return (
-            <div className="container-fluid">            
-            { !this.state.submitted ? (
+            <div className="container-fluid">
+                {!this.state.submitted ? (
                     <Col classname="form-col">
                         <WelcomeJumbotron />
                         <div className="form">
@@ -85,34 +85,33 @@ class Profile extends Component {
                             />
                         </div>
                     </Col>
-            ): (
-                <div>
-                <ProfileNav />
-                
-                <Row className="feed-row">
-                
-                    <Col className="feed" sm={{ size: 8, order: 0, offset: 0 }}>
-                        <InfoCard />
-                        <InfoCard />
-                        <InfoCard />
-                    </Col>
-                    <Col className="userSideBar" sm={{ size: 3, order: 1, offset: 0 }}>
-                        <h2>{this.state.usersname}</h2>
-                        <Link className="userInfo" to={"/Profile/"+ this.state._id}>
-                        <UserInfo 
-                            usersname={this.state.usersname}
-                            location={this.state.location}
-                            id={this.state._id}
-                        />
-                        </Link>
-                        <h2>Update Profile</h2>
-                        <h2>Search Schools</h2>
-                    </Col>
-                </Row>
-                </div> 
-            ) }
-            </div>
+                ) : (
+                        <div>
+                            <ProfileNav />
 
+                            <Row className="feed-row">
+
+                                <Col className="feed" sm={{ size: 8, order: 0, offset: 0 }}>
+                                    <InfoCard />
+                                    <InfoCard />
+                                    <InfoCard />
+                                </Col>
+                                <Col className="userSideBar" sm={{ size: 3, order: 1, offset: 0 }}>
+                                    <h2>{this.state.usersname}</h2>
+                                    <Link className="userInfo" to={"/Profile/" + this.state._id}>
+                                        <UserInfo
+                                            usersname={this.state.usersname}
+                                            location={this.state.location}
+                                            id={this.state._id}
+                                        />
+                                    </Link>
+                                    <h2>Update Profile</h2>
+                                    <h2>Search Schools</h2>
+                                </Col>
+                            </Row>
+                        </div>
+                    )}
+            </div>
         )
     }
 }
