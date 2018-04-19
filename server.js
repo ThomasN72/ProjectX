@@ -23,7 +23,7 @@ const MONGODB_URI = "mongodb://heroku_lkxldss7:a16oev3efogqsamras216lfrr0@ds1493
 // Connect to the Mongo DB
 // mongoose.Promise = Promise;
 // var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/oneappDB";
-mongoose.connect(MONGODB_URI);
+// mongoose.connect(MONGODB_URI);
 
 // if (process.env.MONGODB_URI) {
 //     mongoose.connect(MONGODB_URI, {
@@ -33,14 +33,14 @@ mongoose.connect(MONGODB_URI);
 //     mongoose.connect("mongodb://localhost/oneappDB");
 // };
 
-// // Set up promises with mongoose
-// mongoose.Promise = global.Promise;
+// Set up promises with mongoose
+mongoose.Promise = global.Promise;
 
 
-// // Connect to the Mongo DB
-// mongoose.connect(
-//     process.env.MONGODB_URI || "mongodb://localhost/oneappDB"
-// );
+// Connect to the Mongo DB
+mongoose.connect(
+    process.env.MONGODB_URI || "mongodb://localhost/oneappDB"
+);
 
 app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
