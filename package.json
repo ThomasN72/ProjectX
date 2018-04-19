@@ -8,10 +8,6 @@
         "client": "node scripts/start-client.js",
         "start": "concurrently \"nodemon server.js\" \"npm run client\"",
         "build": "node scripts/build.js",
-        "seed": "node scripts/seedDB.js -platforms && node scripts/seedDB.js -gameList",
-        "seed-platforms": "node scripts/seedDB.js -platforms",
-        "seed-list": "node scripts/seedDB.js -gameList",
-        "seed-details": "node scripts/seedDB.js -gameDetails",
         "test": "echo \"Error: no test specified\" && exit 1",
         "test-seed": "node scripts/testSeed.js",
         "installDeps": "yarn && cd client && yarn"
